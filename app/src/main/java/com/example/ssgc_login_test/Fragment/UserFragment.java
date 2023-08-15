@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -85,23 +84,6 @@ public class UserFragment extends Fragment {
             startActivity(intent);
         });
 
-        Switch sw_lock = rootView.findViewById(R.id.sw_lock);
-        sw_lock.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                Toast.makeText(getContext(), "Locked", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(getContext(), "Unlocked", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        Switch sw_alarm = rootView.findViewById(R.id.sw_alarm);
-        sw_alarm.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                Toast.makeText(getContext(), "Alarm On", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(getContext(), "Alarm Off", Toast.LENGTH_LONG).show();
-            }
-        });
 
         return rootView;
     }
