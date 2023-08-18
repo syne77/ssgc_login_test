@@ -57,7 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                 // Navigate to the next activity
                 startActivity(new Intent(LoginActivity.this, mainActivity.class));
 
-            } catch (ApiException e) {
+            }
+            catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
             }
